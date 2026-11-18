@@ -16,9 +16,13 @@ CRÍTICO) quando a previsão atinge os limiares.
 ## Como rodar
 
 Pré-requisitos: **Java 17** e **Maven**.
+```bash
 mvn spring-boot:run
-Rodar os testes:
+```
+
+```Rodar os testes:
 mvn test
+```
 - O banco H2 fica em arquivo na pasta `data/` (criada ao rodar), então o histórico continua lá depois de reiniciar.
 - As exportações CSV vão para a pasta `exportacoes/`.
 - O código de acesso para alterar limiares está em `src/main/resources/application.properties` (`territorio.codigo-acesso`).
