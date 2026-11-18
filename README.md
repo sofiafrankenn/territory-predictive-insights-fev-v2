@@ -7,6 +7,12 @@ O sistema lê sensores simulados (chuva, nível do rio e nível do bueiro), grav
 válida no banco H2, gera previsões com duas estratégias e emite alertas (ATENÇÃO, ALERTA,
 CRÍTICO) quando a previsão atinge os limiares.
 
+## Integrantes:
+| Leonardo Luster Gomes RM564448  |
+| Ana Luiza Santos Bertão RM563171 |
+| Sofia Bill Franken RM562767 |
+
+
 ## Como rodar
 
 Pré-requisitos: **Java 17** e **Maven**.
