@@ -8,9 +8,9 @@ válida no banco H2, gera previsões com duas estratégias e emite alertas (ATEN
 CRÍTICO) quando a previsão atinge os limiares.
 
 ## Integrantes:
-| Leonardo Luster Gomes RM564448  |
-| Ana Luiza Santos Bertão RM563171 |
-| Sofia Bill Franken RM562767 |
+- Leonardo Luster Gomes – RM564448
+- Ana Luiza Santos Bertão – RM563171
+- Sofia Bill Franken – RM562767
 
 
 ## Como rodar
@@ -19,8 +19,8 @@ Pré-requisitos: **Java 17** e **Maven**.
 ```bash
 mvn spring-boot:run
 ```
-
-```Rodar os testes:
+Rodar os testes:
+```bash
 mvn test
 ```
 - O banco H2 fica em arquivo na pasta `data/` (criada ao rodar), então o histórico continua lá depois de reiniciar.
@@ -106,6 +106,7 @@ O relatório de **status completo** junta partes de origens diferentes: dados do
 e limiares, pontos de monitoramento com o estado de cada sensor, última medição de cada
 sensor e últimos alertas emitidos. Com o Builder, o menu monta o relatório passo a passo,
 escolhendo quais seções entram e em que ordem:
+```java
 new RelatorioBuilder()
     .comTitulo(...)
     .comDataGeracao(...)
@@ -114,6 +115,7 @@ new RelatorioBuilder()
     .comUltimasMedicoes(...)
     .comAlertasEmitidos(..., 5)
     .construir();
+```
 **Por que ali e não em outro lugar:** o relatório é o único objeto do sistema montado por
 partes opcionais e em sequência. Um construtor com todos esses parâmetros ficaria grande e
 difícil de ler. Já `Medicao` e `Alerta` são objetos simples, criados de uma vez e com
